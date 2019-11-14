@@ -1,26 +1,47 @@
 <?php
 
 require_once("config.php");
+//carrega os dados diretamento do banco
+//$sql = new Sql();
+//$result = $sql->select("SELECT * FROM tb_usuarios");
+//echo json_encode($result);
 
-//carrega 1 usuario
-//$root = new Usuario();
-//$root->loadById(1);
-//echo $root;
+//carrega um usuario pelo ID
+/*$login = new Usuario();
+$login->loadById(5);
+echo $login;*/
 
-//carrega varios usuarios
-//$list = Usuario::getList(); 
+//carrega a lista dos usuarios
+//$list = Usuario::getList();
 //echo json_encode($list);
 
-//carrega uma lista de usuarios pelo login
-//$search = Usuario::search("root");
-//echo json_encode($search);
+//carrega os dados de um usuario pelo login
+//$login = Usuario::getLogin("name");
+//echo json_encode($login);
 
-//Carrega usuario por login e senha
+//carrega os dados de um usuario pelo login e senha
+//$at = new Usuario();
+//$at->login("name", "25");
+//echo $at;
 
-$login = new Usuario();
+//Isere um novo usuario
+//$aluno = new Usuario("aluno2", "852");
+//$aluno->insert();
+//echo $aluno;
 
-$login->login("name", "258");
+/*
+atualiza um usuario
+$att = new Usuario();
+$att->loadById(8);
+$att->update("aluno", "753");
+echo $att;*/
 
-echo $login;
+$del = new Usuario();
+
+$del->loadById(8);
+
+$del->delete();
+
+echo $del;
 
 ?>
